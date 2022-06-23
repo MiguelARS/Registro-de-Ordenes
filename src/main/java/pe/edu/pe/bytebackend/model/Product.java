@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -39,5 +40,8 @@ public class Product {
     @JoinColumn(name = "supplier_id")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Supplier supplier;
+
+    @OneToMany(mappedBy = "product")
+    private List<OrderDetail> orderDetailList;
 
 }

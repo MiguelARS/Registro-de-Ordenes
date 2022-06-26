@@ -40,7 +40,7 @@ public class OrderDetailController {
         return orderDetailSaved;
     }
 
-    @PutMapping("{id}")
+    @DeleteMapping("{id}")
     public void deleteOrderDetail(@PathVariable Integer id){
         this.orderDetailService.deleteOrderDetail(id);
     }

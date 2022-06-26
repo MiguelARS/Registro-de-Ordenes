@@ -32,7 +32,7 @@ public class CategoryController {
         return categoryService.saveCategory(category);
     }
 
-    @PutMapping("{id}")
+    @DeleteMapping("{id}")
     public void deleteCategory(@PathVariable Integer id){
         this.categoryService.deleteCategory(id);
     }

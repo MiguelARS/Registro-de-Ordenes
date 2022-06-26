@@ -32,7 +32,7 @@ public class ShipperController {
         return shipperService.saveShipper(shipper);
     }
 
-    @PutMapping("{id}")
+    @DeleteMapping("{id}")
     public void deleteShipper(@PathVariable Integer id){
         this.shipperService.deleteShipper(id);
     }

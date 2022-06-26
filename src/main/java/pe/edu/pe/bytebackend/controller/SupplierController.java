@@ -33,7 +33,7 @@ public class SupplierController {
         return supplierService.saveSupplier(supplier);
     }
 
-    @PutMapping("{id}")
+    @DeleteMapping("{id}")
     public void deleteSupplier(@PathVariable Integer id){
         this.supplierService.deleteSupplier(id);
     }

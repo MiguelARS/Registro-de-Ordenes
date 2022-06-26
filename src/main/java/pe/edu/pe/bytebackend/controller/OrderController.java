@@ -50,7 +50,7 @@ public class OrderController {
         return orderSaved;
     }
 
-    @PutMapping("{id}")
+    @DeleteMapping("{id}")
     public void deleteOrder(@PathVariable Integer id){
         this.orderService.deleteOrder(id);
     }

@@ -10,6 +10,7 @@ import pe.edu.pe.bytebackend.service.ShipperService;
 import java.util.List;
 import java.util.Optional;
 
+@CrossOrigin(origins = {"http://localhost:4200"})
 @RestController
 @RequestMapping("/api/customers")
 public class CustomerController {
@@ -33,7 +34,7 @@ public class CustomerController {
         return customerService.saveCustomer(customer);
     }
 
-    @PutMapping("{id}")
+    @DeleteMapping("{id}")
     public void deleteCustomer(@PathVariable Integer id){
         this.customerService.deleteCustomer(id);
     }
